@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { FetchCoinData } from "../../services/FetchCoinData";
-import { isError, useQuery } from "react-query";
+import { fetchCoinData } from "../../services/fetchCoinData";
+import { useQuery } from "react-query";
 import currencyStore from '../../state/store';
 import { useNavigate } from "react-router-dom";
 
@@ -14,7 +14,7 @@ function CoinTable() {
   const [page, setPage] = useState(1);
   const { data, isLoading, isError, error } = useQuery(
     ["coins", page, currency],
-    () => FetchCoinData(page, currency),
+    () => fetchCoinData(page, currency),
     {
       casheTime: 1000 * 60 * 2,
       staleTime: 1000 * 60 * 2,
