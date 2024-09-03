@@ -1,8 +1,14 @@
 import currencyStore from  '../../state/store';
+import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
 
   const { setCurrency } = currencyStore();
+  const navigate = useNavigate();
+
+    function goToHome() {
+        navigate('/');
+    }
   
   return (
     <div className="navbar bg-base-100">
@@ -37,7 +43,7 @@ function Navbar() {
           </ul>
         </div>
       </div>
-      <div className="navbar-center">
+      <div onClick={goToHome} className="navbar-center">
         <a className="btn btn-ghost text-xl">Crypto Tracker</a>
       </div>
       <div className="navbar-end">

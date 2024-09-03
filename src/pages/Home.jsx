@@ -1,5 +1,5 @@
-import CoinTable from "../Components/CoinTable/CoinTable";
-import Banner from "../Components/Banner/Banner";
+import CoinTable from "../components/CoinTable/CoinTable";
+import Banner from "../components/Banner/Banner";
 
 function Home(){
 

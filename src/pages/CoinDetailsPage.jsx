@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { fetchCoinDetails } from "../services/fetchCoinDetails";
 import currencyStore from "../state/store";
 import parse from "html-react-parser";
+import PageLoader from "../components/PageLoader/PageLoader";
+
 
 function CoinDetailsPage() {
   const { coinId } = useParams();
@@ -18,7 +20,7 @@ function CoinDetailsPage() {
   });
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <PageLoader />
   }
 
   if (isError) {
