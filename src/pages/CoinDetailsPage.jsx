@@ -4,9 +4,9 @@ import PageLoader from "../components/PageLoader/PageLoader";
 import CoinInfoContainer from "../components/CoinInfo/CoinInfoContainer";
 import useFetchCoin from "../hooks/useFetchCoin";
 
-
 function CoinDetailsPage() {
   const { coinId } = useParams();
+
   const { isLoading, isError, coin, currency } = useFetchCoin(coinId);
 
   if (isLoading) {
