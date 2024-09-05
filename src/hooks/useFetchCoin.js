@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 import { fetchCoinDetails } from "../services/fetchCoinDetails";
 import currencyStore from '../state/store';
 function useFetchCoin(coinId) {
-
+    
     const { currency } = currencyStore();
 
     const { isError, isLoading, data: coin } = useQuery(["coin", coinId], () => fetchCoinDetails(coinId), {
