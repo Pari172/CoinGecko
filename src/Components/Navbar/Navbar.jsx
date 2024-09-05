@@ -1,15 +1,13 @@
-import currencyStore from  '../../state/store';
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
+import currencyStore from "../../state/store";
 function Navbar() {
-
   const { setCurrency } = currencyStore();
   const navigate = useNavigate();
 
-    function goToHome() {
-        navigate('/');
-    }
-  
+  function goToHome() {
+    navigate("/");
+  }
+
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -34,11 +32,11 @@ function Navbar() {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            <li onClick={() => setCurrency("inr")}>
-              <a>INR</a>
+            <li>
+              <a onClick={() => setCurrency("inr")}>INR</a>
             </li>
-            <li onClick={() => setCurrency("usd")}>
-              <a>USD</a>
+            <li>
+              <a onClick={() => setCurrency("usd")}>USD</a>
             </li>
           </ul>
         </div>
