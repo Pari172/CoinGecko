@@ -1,6 +1,6 @@
-## Crypto currency price trackiong app
+## Crypto currency price tracking app
 
-[Deployed URL](https://crypto-project-coin-gecko-tijg.vercel.app/)
+[Deployed URL](https://crypto-tracker-amber-iota.vercel.app/)
 
  - Reusable components made using presenter container pattern
  - Custom hooks implemented
